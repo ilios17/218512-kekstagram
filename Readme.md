@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм» [![Build status][travis-image]][travis-url]
 
 * Студент: [Юлия Ерцева](https://up.htmlacademy.ru/javascript/13/user/218512).
-* Наставник: `Неизвестно`.
+* Наставник: `Дмитрий Донецкий`.
 
 ---
 
