@@ -22,7 +22,7 @@ var generateRandom = function (min, max) {
 
 var pictures = [];
 
-function picture (url,likes,comments,description) {
+function picture (url, likes, comments, description) {
   this.url = url;
   this.likes = likes;
   this.comments = comments;
@@ -30,11 +30,11 @@ function picture (url,likes,comments,description) {
 }
 
 var createPicturesArray = function (array) {
-    for (var i = 1; i<=PICTURES_AMOUNT; i++) {
+  for (var i = 1; i <= PICTURES_AMOUNT; i++) {
     var randomComment = commentsArray[generateRandom(0, commentsArray.length)];
     var randomLikes = generateRandom(MIN_LIKES, MAX_LIKES);
     var randomDescription = descriptionsArray[generateRandom(0, descriptionsArray.length)];
-    var newPicture = new picture ('photos/'+i+'.jpg', randomLikes, randomComment, randomDescription);
+    var newPicture = new picture ('photos/' + i + '.jpg', randomLikes, randomComment, randomDescription);
 
     pictures.push(newPicture);
   }
@@ -77,7 +77,7 @@ for (var i = 0; i < avatars.length; i++) {
   avatars[i].src = 'img/avatar-'+ generateRandom(1, 7)+'.svg';
 }
 
-var hideElement = function(element) {
+var hideElement = function (element) {
   element.setAttribute('class', 'visually-hidden');
 };
 
