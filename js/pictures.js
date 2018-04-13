@@ -49,7 +49,7 @@ var pictureTemplate = document.querySelector('#picture').content.querySelector('
 var createPicture = function (image) {
   var singlePicture = pictureTemplate.cloneNode(true);
   singlePicture.querySelector('.picture__img').src = image.url;
-  singlePicture.querySelector('.picture__stat--likes').image = picture.likes;
+  singlePicture.querySelector('.picture__stat--likes').image = image.likes;
   singlePicture.querySelector('.picture__stat--comments').textContent = image.comments;
 
   return singlePicture;
