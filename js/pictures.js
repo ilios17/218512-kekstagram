@@ -22,7 +22,7 @@ var generateRandom = function (min, max) {
 
 var pictures = [];
 
-function picture (url, likes, comments, description) {
+function PictureConstructor(url, likes, comments, description) {
   this.url = url;
   this.likes = likes;
   this.comments = comments;
@@ -34,9 +34,9 @@ var createPicturesArray = function (array) {
     var randomComment = commentsArray[generateRandom(0, commentsArray.length)];
     var randomLikes = generateRandom(MIN_LIKES, MAX_LIKES);
     var randomDescription = descriptionsArray[generateRandom(0, descriptionsArray.length)];
-    var newPicture = new picture ('photos/' + i + '.jpg', randomLikes, randomComment, randomDescription);
+    var CreatePicture = new PictureConstructor('photos/' + i + '.jpg', randomLikes, randomComment, randomDescription);
 
-    pictures.push(newPicture);
+    pictures.push(CreatePicture);
   }
   return array;
 };
@@ -74,7 +74,7 @@ mainPicture.querySelector('.comments-count').textContent = commentsArray.length;
 var avatars = document.querySelectorAll('.social__picture');
 
 for (var i = 0; i < avatars.length; i++) {
-  avatars[i].src = 'img/avatar-'+ generateRandom(1, 7)+'.svg';
+  avatars[i].src = 'img/avatar-' + generateRandom(1, 7) + '.svg';
 }
 
 var hideElement = function (element) {
